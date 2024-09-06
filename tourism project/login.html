@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <form action="login.php" method="post">
+        <table border="0">
+            <tr>
+                <td colspan="2">
+                    <span class="login">Login</span>
+                </td>
+            <tr>
+                <td><i class="fas fa-user icon"></i>
+                </td>
+                <td><input type="text" name="username" size="30" placeholder=" Username" required /></td>
+            </tr>
+            <tr>
+                <td><i class="fas fa-lock icon"></i>  
+                </td>
+                <td style="position:relative;">
+                    <input id='pass1'type="password" name="password" size="30" placeholder=" Password" required />
+                    <i class="far fa-eye eye-icon" id="showPasswordToggle" onclick="togglePasswordVisibility()"></i>
+                </td>
+            </tr>
+             <tr>
+                <td></td>
+                <td><input class="submit" type="submit" value="Login" /></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center"><p>D'ont have an account? <a href="registration.html"> sign up here</a></p>
+                   </td>
+            </tr>
+     
+    </form>
+
+</table>
+<script>
+    function togglePasswordVisibility() {
+      var passwordInput = document.getElementById("pass1"); 
+      var showPasswordToggle = document.getElementById("showPasswordToggle");
+
+      if (passwordInput.type === "password") {
+        passwordInput.type = "text";
+        showPasswordToggle.classList.remove("far", "fa-eye");
+        showPasswordToggle.classList.add("far", "fa-eye-slash");
+      } else {
+        passwordInput.type = "password";
+        showPasswordToggle.classList.remove("far", "fa-eye-slash");
+        showPasswordToggle.classList.add("far", "fa-eye");
+      }
+    }</script>
+</body>
+
+</html>

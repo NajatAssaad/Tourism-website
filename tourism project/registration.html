@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="registration.css">
+    <script src="registration.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+ 
+    <form action="registration.php" method="post" onsubmit="return  confirmpass()&&  validateForm() " >
+
+        <table border="0">
+            <tr>
+                <td colspan="2">
+                    <span class="create"> Create account</span>
+                </td>
+            </tr>
+
+            <tr>
+                <td><i class="fas fa-user"></i></td>
+                <td><input type="text" name="username" size="30" placeholder=" Username" required /></td>
+            </tr>
+            <tr>
+                <td><i class="fas fa-user"></i></td>
+                <td><input type="text" name="fname" size="30" placeholder=" first name" required /></td>
+            </tr> 
+            <tr>
+                <td><i class="fas fa-user"></i></td>
+                <td><input type="text" name="lname" size="30" placeholder=" last name" required /></td>
+            </tr>
+            <tr>
+                <td><i class="fas fa-envelope"></i>
+                </td>
+                <td><input type="email" name="email" size="30" placeholder=" Email" required /></td>
+
+            </tr>
+            <tr>
+                <td><i class="fas fa-phone"></i>
+                </td>
+                <td><input type="text" pattern="[0-9]{2}-[0-9]{3}-[0-9]{3}" name="phonenb" size="30" placeholder=" Phone Number" required /></td>
+            </tr>
+            <tr>
+                <td><i class="fas fa-lock"></i>
+                </td>
+                <td style='position:relative ;'><input type="password" name="password" id="pass1" size="30" placeholder=" Password" required /> 
+                    <i class="far fa-eye eye-icon" id="showPasswordToggle" onclick="togglePasswordVisibility()"></i></td>
+
+            </tr>
+            <tr>
+                <td><i class="fas fa-lock"></i>
+                </td>
+                <td  style='position:relative;'>
+                    <input  type="password" name="password2" id="pass2" size="30" placeholder=" Confirm Password"
+                        required />
+                    <i class="far fa-eye eye-icon" id="showPassword2Toggle" onclick="togglePassword2Visibility()"></i></td>
+                <td id="error"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td ><input class="submit" type="submit" value="Sign Up" /></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <p>Have an account? <a href="login.html"> login here</a></p>
+                </td>
+            </tr>
+
+    </form>
+
+    </table>
+    
+      <script>
+        function togglePasswordVisibility() {
+          var passwordInput = document.getElementById("pass1");
+          var showPasswordToggle = document.getElementById("showPasswordToggle");
+    
+          if (passwordInput.type === "password") {
+            passwordInput.type = "text";
+            showPasswordToggle.classList.remove("far", "fa-eye");
+            showPasswordToggle.classList.add("far", "fa-eye-slash");
+          } else {
+            passwordInput.type = "password";
+            showPasswordToggle.classList.remove("far", "fa-eye-slash");
+            showPasswordToggle.classList.add("far", "fa-eye");
+          }
+        }
+        function togglePassword2Visibility() {
+          var passwordInput = document.getElementById("pass2");
+          var showPasswordToggle = document.getElementById("showPassword2Toggle");
+    
+          if (passwordInput.type === "password") {
+            passwordInput.type = "text";
+            showPasswordToggle.classList.remove("far", "fa-eye");
+            showPasswordToggle.classList.add("far", "fa-eye-slash");
+          } else {
+            passwordInput.type = "password";
+            showPasswordToggle.classList.remove("far", "fa-eye-slash");
+            showPasswordToggle.classList.add("far", "fa-eye");
+          }
+        }
+        function validLenght() {
+    let pass = document.getElementById('new');
+    let li = document.getElementById('1');
+    let li2 = document.getElementById('5');
+    
+    if (pass.value.length < 6) {
+        li.style.color = 'red';
+        li2.style.color = 'red';
+        return false;
+    } else {
+        li.style.textDecoration = 'line-through';
+        li2.style.textDecoration = 'line-through';
+        li.style.color = 'black';
+        li2.style.color = 'black';
+        return true;
+    }
+}
+function validUpper(){
+
+let pass = document.getElementById('new').value;
+
+for (let i = 0; i < pass.length; i++) {
+    if (pass[i] >= 'A' && pass[i] <= 'Z') {
+        let li = document.getElementById('2');
+        let li2 = document.getElementById('6');
+        li.style.textDecoration = 'line-through';
+        li2.style.textDecoration = 'line-through';
+        li.style.color = 'black';
+        li2.style.color = 'black';
+        return true;
+    }
+}
+
+let li = document.getElementById('2');
+let li2 = document.getElementById('6');
+li.style.color = 'red';
+li2.style.color = 'red';
+return false;
+}
+
+
+function validLower(){
+
+let pass = document.getElementById('new').value;
+
+for (let i = 0; i < pass.length; i++) {
+if (pass[i] >= 'a' && pass[i] <= 'z') {
+    let li = document.getElementById('3');
+    let li2 = document.getElementById('7');
+    li.style.textDecoration = 'line-through';
+    li2.style.textDecoration = 'line-through';
+    li.style.color = 'black';
+    li2.style.color = 'black';
+    return true;
+}
+}
+
+let li = document.getElementById('3');
+let li2 = document.getElementById('7');
+li.style.color = 'red';
+li2.style.color = 'red';
+return false;
+}
+
+
+
+
+function validDigit(){
+
+let pass = document.getElementById('new').value;
+
+for (let i = 0; i < pass.length; i++) {
+if (pass[i] >= 0 && pass[i] <= 9) {
+    let li = document.getElementById('4');
+    let li2 = document.getElementById('8');
+    li.style.textDecoration = 'line-through';
+    li2.style.textDecoration = 'line-through';
+    li.style.color = 'black';
+    li2.style.color = 'black';
+    return true;
+}
+}
+
+let li = document.getElementById('2');
+let li2 = document.getElementById('6');
+li.style.color = 'red';
+li2.style.color = 'red';
+return false;
+}
+
+
+function validateForm() {
+return ( validLenght() && validUpper() && validLower() && validDigit());
+}
+
+      </script>
+   
+    
+</body>
+
+</html>

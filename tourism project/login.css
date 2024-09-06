@@ -1,0 +1,87 @@
+body {
+    padding: 0px;
+    margin: 0px;
+    background-image: url(background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+img {
+    height: 30px;
+    width: 30px;
+
+
+}
+
+input {
+    box-sizing: border-box;
+    height: 30px;
+    width: 300px;
+    border: none;
+    border-radius: 10px;
+}
+
+table input [type=text],
+table input [type=password]
+ {
+    text-indent: 5px;
+}
+
+table {
+    margin: auto;
+    margin-left: 170px;
+    margin-top: 120px;
+}
+
+td {
+    height: 55px;
+
+
+}
+
+.login {
+    font-family: sans-serif;
+    font-size: 30px;
+
+}
+
+table .submit {
+
+    background-color: #acda71;
+    color: white;
+    margin-left: 0px;
+}
+
+.submit:hover {
+
+    box-shadow: 3px 3px 15px 5px rgb(192, 207, 161);
+}
+
+a {
+    color: #acda71;
+}
+
+p {
+    font-size: 15px;
+}
+.eye-icon{
+    position: absolute;
+    right: 5%;
+    top: 20px;
+  }
+  .icon{
+    font-size: 20px;
+  }
+@media (max-width: 600px) {
+    table {
+        margin: auto;
+        margin-top: 25%;
+    }
+
+    table input {
+        width: 250px;
+
+    }
+
+}

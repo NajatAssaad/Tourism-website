@@ -1,0 +1,159 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.details-container {
+    width: 100%;
+    display: flex;
+    height: 100vh;
+
+}
+
+.trip-img {
+
+    width: 60%;
+    position: relative;
+    height: auto;
+    padding: 5%;
+
+
+}
+
+.trip-img img {
+
+    width: 100%;
+    height:100%;
+    box-shadow: 0px 0px 3px 0px;
+
+}
+
+.trip-img img:hover {
+    transform: scale(0.9);
+}
+
+
+.trip-details {
+    padding-top: 10%;
+    width: 40%;
+
+
+}
+
+.trip-details h1 {
+    margin-right: 7%;
+    margin-left: 7%;
+    border-bottom: 2px solid black;
+    letter-spacing: 2px;
+
+}
+
+ table {
+    font-size: 20px;
+    margin: auto;
+    width: 85%;
+    margin-top: 10px;
+
+}
+
+.trip-details table td {
+
+    padding: 10px 0px;
+    text-align: left;
+
+}
+input[type='date']{
+    height: 40px;
+    width: 100%;
+}
+
+.book {
+    height: 40px;
+    width: 100%;
+    background-color: #485b41;
+    border: none;
+    font-size: 20px;
+    letter-spacing: 3px;
+    color: white;
+}
+.drive{
+    height: 40px;
+    width: 50%;
+    
+    background-color: #3abb5a;
+    border: none;
+}
+.drive a{
+    text-decoration: none;
+    color: white;
+    letter-spacing: 3px;
+    
+}
+.bookingform table td{
+    width: 100%;;
+}
+
+.trip-details .number {
+
+    height: 25px;
+    text-align: center;
+    width: 70px;
+    border-radius: 4px;
+}
+
+
+
+.book:hover {
+    box-shadow: 1px 1px 6px black;
+}
+
+
+.trip-details table td i {
+    margin-right: 10px;
+}
+
+.moredetails h2 {
+    text-align: center;
+    letter-spacing: 2px;
+    margin: 3%;
+}
+
+.moredetails {
+    position: relative;
+    padding-left: 15%;
+    padding-right: 15%;
+    letter-spacing: 9%;
+    word-spacing: 4px;
+    text-align: center;
+    border: 5px solid #485b41;
+    width: 80vw;
+    margin: auto;
+    margin-bottom: 5%;
+
+}
+
+@media (max-width: 768px) {
+    .details-container {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .trip-img {
+        width: 100%;
+        padding: 0;
+    }
+
+    .trip-img img {
+        width: 100%;
+        height: auto;
+    }
+
+    .trip-details {
+        width: 100%;
+    }
+
+    .moredetails {
+        margin-top: 3%;
+    }
+}

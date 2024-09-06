@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(90deg, rgba(190, 217, 188, 0.5),#408626);
+}
+
+.container {
+    display: flex;
+    width: 50%;
+    margin: auto;
+    background: #fff;
+    height: 60vh;
+    box-shadow: 0px 0px 10px 0px;
+    top: 20vh;
+    position: relative;
+}
+
+.container .left {
+    width: 50%;
+    padding-left: 5%;
+    margin: auto;
+    height: 60%;
+}
+span{
+    font-size: 18px;
+}
+.container .left ul {
+
+    margin-left: 5%;
+}
+
+.container .left ul li {
+    margin-top: 10px;
+}
+
+.container .left h1 {
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    font-weight: 300;
+    margin-left: 10px;
+}
+
+.container .right .phone {
+    display: none;
+}
+
+.container .right {
+    width: 50%;
+    margin: auto;
+}
+
+.container .right table {
+    width: 65%;
+    margin: auto;
+}
+
+.container .right input {
+    height: 35px;
+    width: 100%;
+    border-radius: 3px;
+}
+
+.container .right input[type=password] {
+    padding: 5%;
+    border: 1px solid gray;
+}
+
+.container .right table td {
+    height: 50px;
+}
+
+.container .right input[type=submit] {
+    background: linear-gradient(90deg, rgba(190, 217, 188, 0.5),#408626);
+    color: white;
+    font-size: 13px;
+    text-transform: uppercase;
+    border: none;
+}
+
+.container .right input[type=reset] {
+    border: none;
+    background-color: #fff;
+    color: gray;
+    font-size: 13px;
+}
+
+@media (max-width: 900px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        top: 0;
+        width: 80%
+    }
+
+    .container .left {
+
+        width: 70%;
+        margin-top: 20px;
+    }
+
+    .container .left .must {
+        display: none;
+
+    }
+
+    .container .left h1 {
+        text-align: center;
+
+    }
+
+    .container .right {
+        width: 70%;
+    }
+
+    .container .right table {
+        width: 100%;
+    }
+
+    .container .right table td {
+        height: 60px;
+    }
+
+    .must span {
+        font-size: 18px;
+
+    }
+
+    .container .right .phone {
+        display: inline;
+
+    }
+
+
+}

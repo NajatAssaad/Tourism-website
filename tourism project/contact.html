@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif
+        }
+
+        .container {
+            height: 70vh;
+            width: 60%;
+            background-color: burlywood;
+            display: flex;
+            flex-direction: row;
+            margin: auto;
+            margin-top: 15vh;
+        }
+
+        .container .right {
+            width: 40%;
+            background: linear-gradient(90deg, #67935b, #23a844);
+            transform: scale(1.1);
+            border-radius: 5px;
+            color: #fff;
+        }
+
+        .container .right ul {
+            list-style-type: none;
+            margin: auto;
+            margin-left: auto;
+            height: 70%;
+            width: 80%;
+            margin-left: 10%;
+            margin-top: 10%;
+        }
+
+        .container .right ul li {
+            margin-bottom: 10%;
+        }
+
+        .container .right ul li i {
+            background-color: rgb(255 255 255 / 10%);
+            border-radius: 50%;
+            border: none;
+            padding: 10px;
+            color: white;
+        }
+
+        .container .right h2 {
+            margin-top: 15%;
+            margin-left: 8%;
+
+        }
+
+        .container .left {
+            width: 60%;
+            background: #fff;
+            box-shadow: gray 0px 0px 15px;
+        }
+
+        .container .left h1 {
+            margin-left: 10%;
+            margin-top: 5%;
+        }
+
+        .container .left table {
+            width: 80%;
+            margin: auto;
+        }
+
+        .container .left textarea {
+            width: 100%;
+            text-indent: 5px;
+            padding: 5px;
+        }
+
+        .container .left table input {
+            height: 35px;
+            border-radius: 4px;
+        }
+
+        .container .left table td {
+            height: 50px;
+            width: 50%;
+        }
+
+        .container table td input[type=text],
+        .container table td input[type=email] {
+            width: 90%;
+            text-indent: 5px;
+            border: 1px solid gray;
+        }
+
+        .container table td input[type=submit] {
+            background: linear-gradient(90deg, #67935b, #23a844);
+            border: none;
+            font-size: 16px;
+            width: 70%;
+            color: #fff;
+        }
+
+        .container .left .subject {
+            width: 100%;
+        }
+
+        @media (max-width: 800px) {
+            .container {
+                flex-direction: column;
+                width: 100%;
+                height: 100vh;
+                margin-top: 5%;
+            }
+
+            .container .right {
+                transform: none;
+                width: 100%;
+                border-radius:0;
+            }
+
+            .container .left {
+                width: 100%;
+                height: auto;
+                box-shadow: none;
+                border-radius: 0;
+            }
+
+            .container .left table {
+                width: 90%;
+                margin: auto;
+            }
+
+            .container table td input[type=text],
+            .container table td input[type=email] {
+                width: 95%;
+                text-indent: 5px;
+                border: 1px solid gray;
+            }
+
+            .container .left h1 {
+                font-size: 30px;
+                font-weight: 300;
+                text-align: center;
+                margin: 0;
+            }
+
+            .container table td input[type=submit] {
+                background: linear-gradient(90deg, #67935b, #23a844);
+                border: none;
+                font-size: 16px;
+                width: 200%;
+                color: #fff;
+            }
+
+            .container .right h2 {
+                margin-top: 10%;
+                margin-left: 8%;
+                border-bottom: 1px solid;
+                width: 50%;
+            }
+        }
+       
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="left">
+            <h1>Get in Touch</h1>
+            <form action="https://formsubmit.co/4f3e77d0dc4f3e2bddd2d756e960a73f" method="POST">
+                <table>
+                    <tr>
+                        <td><input type="text" class="name" name="fullname" placeholder="Name" required></td>
+                        <td align="right"><input type="email" name="email" placeholder="Email" required></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><input class="subject " type="text" name="_subject" placeholder="Subject" required></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><textarea name="content" id="" cols="30" rows="10"
+                                placeholder="Write something..." required></textarea></td>
+                    </tr>
+                    <tr>
+                        <td><input type="submit" value="send message"></td>
+                    </tr>
+                </table>
+                <input type="hidden" name="_next" value="http://localhost/tourism%20project/thanks.html">
+            </form>
+        </div>
+        <div class="right">
+            <h2>Contact Us</h2>
+            <ul>
+                <li><i class="fas fa-map-marker-alt"></i>  tripoli/al-Mina </li>
+                <li><i class="fas fa-phone"></i> 71/978700 </li>
+                <li><i class="fas fa-envelope"> </i>  example@gmail.com </li>
+                <li><i class="fab fa-facebook"> </i> tourismfb </li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,87 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+
+}
+body{
+    height: 100vh;
+    background-color: #000;
+    background-image: url('aloo.jpg');
+    background-size: cover;
+    background-position: center;
+}
+li{
+    list-style-type: none;
+
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+
+}
+a:hover{
+    color: orange;
+}
+header{
+    position: relative;
+    padding: 0 2rem;
+}
+.navbar{
+width: 100%;
+height: 60px;
+display: flex;
+align-items: center;
+justify-content: space-between;
+max-width: 1200px;
+margin: 0 auto;
+
+}
+
+.navbar .logo a{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.navbar .links{
+    display: flex;
+    gap: 2rem;
+}
+
+.navbar .toggle_btn{
+    color:white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+
+}
+
+.action_btn{
+    background-color: orange;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: scale 0.2 ease;
+}
+
+.action_btn:hover{
+        scale: 1.05;
+        color: white;
+}
+.action_btn:active{
+    scale: 0.95;
+}
+
+/*responsive design*/
+@media(max-width:600px){
+    .navbar .links{width: 70%}
+    .navbar .action_btn{width: 25%;}
+    
+}

@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+
+.about-section {
+    width: 100%;
+}
+
+.about-section .about-container {
+    width: 80%;
+    display: block;
+    margin: 0px auto;
+    padding: 50px 0px;
+}
+
+.about-container .about-title {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.about-container .about-title h1 {
+    text-transform: uppercase;
+    font-size: 35px;
+    position: relative;
+    color: #485b41;
+}
+.about-container .about-title h1::after{
+    content: '';
+    background: #485b41;
+    width: 200px;
+    height: 3px;
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+
+
+.about-content {
+    float: left;
+    width: 55%;
+}
+
+.about-img-section {
+    float: right;
+    width: 40%;
+}
+
+.about-img-section img {
+    width: 100%;
+    height: auto;
+}
+
+.about-content .about-article h3 {
+    color: #a3a3a3;
+    font-size: 17px;
+}
+
+.about-content .about-article p {
+    margin-top: 20px;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+}
+
+.about-content .about-article .about-btn {
+    margin-top: 50px;
+
+}
+
+
+
+.about-container .social {
+    width: 100%;
+    clear: both;
+    margin-top: 50px;
+    text-align: center;
+    display: inline-block;
+}
+
+.about-container .social i {
+    color: #fff;
+    font-size: 22px;
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    line-height: 45px;
+    text-align: center;
+    background-color: #485b41;
+    margin: 0px 5px;
+}
+
+.about-container .social i:hover{
+    color: #fff;
+    background-color: #2853a1;
+    transition: 1s ease;
+    transform: rotate(360deg);
+}
+
+@media screen and (max-width:768px) {
+
+    .about-section .about-container {
+        width: 80%;
+        display: block;
+        margin: auto;
+
+
+    }
+
+    .about-content {
+        float: none;
+        width: 100%;
+        display: block;
+        margin: auto;
+    }
+
+    .about-img-section {
+        float: none;
+        width: 100%;
+        margin-top: 50px;
+    }
+
+    .about-img-section img {
+        width: 100%;
+        height: auto;
+        display: block;
+        margin: auto;
+    }
+
+    .about-container .about-title h1 {
+        text-align: center;
+        font-size: 30px;
+
+    }
+
+    .about-container .about-article .about-btn {
+        text-align: center;
+    }
+
+    .about-container .about-article .about-btn a {
+        padding: 6px 15px;
+        font-size: 16px;
+
+    }
+
+    .about-container .social i {
+        font-size: 19px;
+        height: 35px;
+        width: 35px;
+        line-height: 35px;
+    }
+
+
+}
